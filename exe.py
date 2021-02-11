@@ -28,3 +28,6 @@ for i in range(len(listA)):
 import pandas as pd
 ed = pd.DataFrame(dict1)
 print(ed)
+
+df.plot(kind = "barh", x = "Education" , y = "Male",figsize = (9,5),width = 0.7,color = "Magenta", alpha = 0.5)
+plt.show()
