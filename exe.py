@@ -53,3 +53,13 @@ if(float(z) < zα/2):
     print("Since z is less than zα we will reject the null hypothesis")
 else:
     print("Since z is greater than zα we failed to reject the null hypothesis")
+
+A = lt.iloc[:,1:].to_numpy().reshape(17,4)
+print("Matrix : ")
+print(A)
+
+rank1 = np.linalg.matrix_rank(A)
+print("The rank is --> ",rank1)
+
+eig = np.linalg.eig(A)
+print("The eign value --> ",eig)
