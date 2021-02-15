@@ -31,3 +31,25 @@ print(ed)
 
 df.plot(kind = "barh", x = "Education" , y = "Male",figsize = (9,5),width = 0.7,color = "Magenta", alpha = 0.5)
 plt.show()
+
+#import library
+import numpy as np
+import math
+
+#values of the formula
+sam_prop = np.round(mean,2)
+pop_prop = int(input("Tell me your hypothesis population proportion(P) --> "))
+n = len(lt["State"])
+
+#z_alpha calculated from the table
+zα = float(input("Tell me your Z-alpha(zα) --> "))
+
+#formula 
+z = (sam_prop - pop_prop)/math.sqrt((pop_prop*(100 - pop_prop))/n)
+print("The value of Z is --> ",np.round(z,3))
+
+#comparing the value of calculated z with z_alpha
+if(float(z) < zα/2):
+    print("Since z is less than zα we will reject the null hypothesis")
+else:
+    print("Since z is greater than zα we failed to reject the null hypothesis")
