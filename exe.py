@@ -93,3 +93,31 @@ plt.yticks(ind, lt["State"])
 plt.xticks(np.arange(0, 200, 10)) 
 plt.legend((p1[0], p2[0]), ('2001 to 2010', '2011 to 2020')) 
 plt.show()
+
+track = []
+def con_pan():
+    print("here's your functions of your pc(adm/mouse/keyboard/update) ")
+    k = input()
+    if(k == "adm" or k == "mouse" or k == "keyboard" or k == "update"):
+        track.append(k)
+        print("we are going to track your activity : ",track)
+def window(x):
+    if(x <= 7):
+        print("Here you have your Start ")
+        print("Camera/solitaire/control panel : ")
+        z = input("")
+        if(z == "control panel"):
+            print(con_pan())
+                
+    elif(x == 8):
+        print("In Windows 8 you won't get start ")
+    elif(x == 9):
+        print("Microsoft hasn't released windows 9")
+    else:
+        print("Here you have start in Windows ", x)
+        print("Camera/solitaire/control panel : ")
+        z = input("")
+        if(z == "control panel"):
+            print(con_pan())
+            
+window(int(input("Tell me your windows generation : ")))
