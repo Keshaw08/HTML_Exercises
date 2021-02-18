@@ -70,3 +70,26 @@ lit.plot(kind="bar",x = "State",y = "01 to 2011(%)",figsize=(15,7),color="cyan",
 plt.xlabel("States of India")
 plt.ylabel("Range of literacy rate")
 plt.show()
+
+import numpy as np 
+import matplotlib.pyplot as plt 
+
+N = 34
+
+year1 = lt["01 to 2011(%)"]
+year11 = lt["10 to 2020(%)"] 
+
+ytic = np.arange(N) 
+width = 0.7
+
+figsize = plt.figure(figsize=(14,10.5))
+p1 = plt.barh(ytic, year1, width,color="turquoise") 
+p2 = plt.barh(ytic, year11, width, left = year1,color="lightgreen") 
+
+plt.ylabel("States of India")
+plt.xlabel("Litercy rate value")
+plt.title('Literacy Rate of India In these 2 dacades') 
+plt.yticks(ind, lt["State"])
+plt.xticks(np.arange(0, 200, 10)) 
+plt.legend((p1[0], p2[0]), ('2001 to 2010', '2011 to 2020')) 
+plt.show()
