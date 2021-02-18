@@ -63,3 +63,10 @@ print("The rank is --> ",rank1)
 
 eig = np.linalg.eig(A)
 print("The eign value --> ",eig)
+
+import matplotlib.pyplot as plt
+
+lit.plot(kind="bar",x = "State",y = "01 to 2011(%)",figsize=(15,7),color="cyan",title="Literacy rate in India from 2001 to 2011",width=0.5)
+plt.xlabel("States of India")
+plt.ylabel("Range of literacy rate")
+plt.show()
